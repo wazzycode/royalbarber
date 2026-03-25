@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Royal Barber Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins, sans-serif;background:#0c0c0c;color:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(8px);
+z-index:1000;
+border-bottom:1px solid rgba(212,175,55,0.2);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:1.5rem;
+font-weight:700;
+color:#d4af37;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{color:#d4af37}
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=1920') center/cover no-repeat fixed;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:3.5rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:30px;
+color:#ddd;
+}
+
+.btn{
+padding:14px 30px;
+border-radius:40px;
+border:1px solid #d4af37;
+margin:10px;
+transition:.3s;
+display:inline-block;
+}
+
+.btn-primary{
+background:#d4af37;
+color:#000;
+}
+
+.btn:hover{
+box-shadow:0 0 15px #d4af37;
+transform:translateY(-2px);
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:50px;
+font-family:'Playfair Display',serif;
+}
+
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+color:#ccc;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:#111;
+padding:30px;
+border-radius:16px;
+text-align:center;
+transition:.3s;
+border:1px solid rgba(212,175,55,0.1);
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+border-color:#d4af37;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:#111;
+padding:25px;
+border-radius:14px;
+border:1px solid rgba(212,175,55,0.1);
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.map iframe{
+width:100%;
+height:300px;
+border:0;
+border-radius:12px;
+}
+
+.booking{
+text-align:center;
+background:#111;
+border-radius:20px;
+}
+
+footer{
+background:#000;
+padding:40px 8%;
+text-align:center;
+border-top:1px solid rgba(212,175,55,0.2);
+}
+
+.mobile-menu{
+display:none;
+}
+
+@media(max-width:768px){
+.nav-links{display:none}
+.mobile-menu{display:block;cursor:pointer}
+.contact-grid{grid-template-columns:1fr}
+.hero h1{font-size:2.4rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">The Royal Barber Shop</div>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="mobile-menu">☰</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>The Royal Barber Shop</h1>
+<p>Precision Cuts. Timeless Style.</p>
+<a class="btn btn-primary" href="#booking">Book Appointment</a>
+<a class="btn" href="tel:16132229192">Call Now</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About</h2>
+<p class="about">At The Royal Barber Shop, we blend traditional craftsmanship with modern style. Experience precision cuts, clean fades, and a professional atmosphere designed for the modern gentleman.</p>
+</section>
+
+<section id="services">
+<h2 class="section-title">Services</h2>
+<div class="services">
+<div class="service-card">Haircut</div>
+<div class="service-card">Beard Trim</div>
+<div class="service-card">Skin Fade</div>
+<div class="service-card">Hot Towel Shave</div>
+<div class="service-card">Kids Cut</div>
+<div class="service-card">Line Up</div>
+</div>
+</section>
+
+<section id="reviews">
+<h2 class="section-title">4.7 ★ Customer Reviews</h2>
+<div class="reviews">
+<div class="review-card">"Best fade I've ever had. Super clean shop."</div>
+<div class="review-card">"Professional and friendly. Highly recommend."</div>
+<div class="review-card">"Top-tier barbering and great atmosphere."</div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+<div class="contact-grid">
+<div>
+<p>260 Raglan St S, Renfrew, ON K7V 1R4</p>
+<p>(613) 222-9192</p>
+<p>Opens 10 AM</p>
+</div>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=260%20Raglan%20St%20S%20Renfrew%20ON&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+</section>
+
+<section id="booking" class="booking">
+<h2 class="section-title">Book Your Appointment</h2>
+<a class="btn btn-primary" href="#">Book Online</a>
+</section>
+
+<footer>
+<p>The Royal Barber Shop</p>
+<p>(613) 222-9192</p>
+<p>260 Raglan St S, Renfrew, ON</p>
+<p>© The Royal Barber Shop</p>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener('click',function(e){
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+});
+});
+</script>
+
+</body>
+</html>
